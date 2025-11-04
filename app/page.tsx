@@ -324,7 +324,7 @@ export default function Home() {
                 <span className="text-red-600 mr-2">▶</span>
                 <span>
                   <span className="text-red-500 font-semibold">90%</span> trader
-                  thua lỗ trong thị trường Forex
+                  thua lỗ trong thị trường Crypto
                 </span>
               </li>
               <li className="flex items-start">
@@ -475,7 +475,7 @@ export default function Home() {
       >
         <div className="container mx-auto">
           <h2 className="text-center text-3xl md:text-4xl font-bold text-red-600 uppercase mb-2">
-            NỘI DUNG KHÓA HỌC
+            tại alpha net có
           </h2>
           <h3 className="text-center text-2xl md:text-3xl font-bold text-white mb-10 uppercase">
             “Bí Quyết Sống Sót Cùng Crypto”
@@ -497,16 +497,16 @@ export default function Home() {
             <div className="space-y-6">
               {[
                 {
-                  title: "BUỔI 1",
-                  desc: "Thức tỉnh – Sự thật về Crypto & nỗi đau của trader",
+                  desc: "Hiểu thị trường từ gốc rễ – Cách dòng tiền thật di chuyển và lý do 90% trader thua lỗ.",
                 },
                 {
-                  title: "BUỔI 2",
-                  desc: "Thấu hiểu – Nến Thanh Khoản & chỉ báo độc quyền",
+                  desc: "Chiến lược giao dịch thực chiến – Cách xác định xu hướng, điểm vào/ra lệnh và đặt dừng lỗ hợp lý.",
                 },
                 {
-                  title: "BUỔI 3",
-                  desc: "Tự chủ – Quản lý vốn, tâm lý & thực chiến",
+                  desc: "Tư duy & Quản lý vốn thông minh – Giữ tài khoản sống sót và tăng trưởng bền vững giữa biến động.",
+                },
+                {
+                  desc: "Thực hành trực tiếp trên thị trường thật – Cầm tay chỉ việc, đọc biểu đồ – đặt lệnh – rút kinh nghiệm cùng cộng đồng.",
                 },
               ].map((session, idx) => (
                 <div
@@ -519,9 +519,6 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="p-5">
-                    <h4 className="text-xl font-bold text-red-500 uppercase">
-                      {session.title}
-                    </h4>
                     <p className="text-gray-200">{session.desc}</p>
                   </div>
                 </div>
@@ -739,63 +736,40 @@ export default function Home() {
             <Image
               width={500}
               height={500}
-              src="/fb.jpg"
+              src="/assets/1.png"
               alt="Feedback 1"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/fb.jpg"
+              src="/assets/2.png"
               alt="Feedback 2"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/fb.jpg"
+              src="/assets/3.png"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/fb.jpg"
+              src="/assets/4.png"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/fb.jpg"
+              src="/assets/5.png"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            <Image
-              width={500}
-              height={500}
-              src="/fb.jpg"
-              alt="Feedback học viên offline"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-            <Image
-              width={500}
-              height={500}
-              src="/fb.jpg"
-              alt="Feedback học viên offline"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-            <Image
-              width={500}
-              height={500}
-              src="/fb.jpg"
-              alt="Feedback học viên offline"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-          </div>
         </div>
       </section>
 
