@@ -1,6 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
+
+
+const menu = [
+  {
+    title: "Nội Dung",
+    href: "#content"
+  },
+  {
+    title: "Giảng Viên",
+    href: "#instructor"
+  },
+  {
+    title: "Đánh Giá",
+    href: "#feedback"
+  },
+  {
+    title: "Liên Hệ",
+    href: "#contact"
+  },
+]
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +46,7 @@ export default function Home() {
 
       {/* 🔹 Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b-2 border-red-700 shadow-[0_0_20px_rgba(255,0,0,0.3)]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo / Home */}
             <div className="flex-shrink-0">
@@ -47,37 +68,22 @@ export default function Home() {
             </div>
 
             {/* Menu Desktop */}
+
             <div className="hidden md:flex items-center gap-10 tracking-wide">
-              <a
-                href="#solution"
-                className="text-white hover:text-red-500 transition"
-              >
-                Giải Pháp
-              </a>
-              <a
-                href="#content"
-                className="text-white hover:text-red-500 transition"
-              >
-                Nội Dung
-              </a>
-              <a
-                href="#instructor"
-                className="text-white hover:text-red-500 transition"
-              >
-                Giảng Viên
-              </a>
-              <a
-                href="#feedback"
-                className="text-white hover:text-red-500 transition"
-              >
-                Đánh Giá
-              </a>
-              <a
-                href="#contact"
-                className="text-white hover:text-red-500 transition"
-              >
-                Liên Hệ
-              </a>
+              {
+                menu.map((item, index) => {
+                  return (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="text-white hover:text-red-500 transition"
+                    >
+                      {item.title}
+                    </a>
+                  )
+                })
+              }
+
             </div>
 
             {/* Button Desktop */}
@@ -183,40 +189,38 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT SIDE */}
           <div className="space-y-8 text-white">
             {/* Title box */}
             <div className="inline-block border-2 border-dashed border-red-600 px-8 py-3 bg-red-900/70 backdrop-blur-sm">
               <p className="text-xl md:text-2xl font-bold uppercase text-center">
-                “ Bí Quyết Sống Sót Cùng Forex ”
+                “ TRẢI NGHIỆM THỰC CHIẾN CÙNG CỘNG ĐỒNG CRYPTO ”
               </p>
             </div>
 
             {/* Headings */}
             <div className="space-y-1">
               <h1 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
-                Khoá học Trading
+                THỰC CHIẾN CÙNG CÁC TRADER
                 <br />
-                Scaping lướt sóng với
+                ĂN NGỦ VỚI BIỂU ĐỒ
               </h1>
-              <h2 className="text-3xl md:text-4xl font-bold text-red-600 uppercase tracking-widest">
-                Nến Thanh Khoản
-              </h2>
             </div>
 
             {/* Badge */}
             <div className="bg-red-900/70 backdrop-blur-sm inline-block px-4 py-2 rounded-md shadow-[0_0_15px_rgba(255,0,0,0.4)]">
               <p className="text-white font-semibold text-base">
-                Phương pháp chỉ dành cho 10% Trader Thắng Cuộc
+                Cầm tay chỉ việc – Học tư duy & hành động như trader chuyên nghiệp
               </p>
             </div>
 
             {/* Description */}
             <p className="text-gray-200 leading-relaxed text-sm max-w-xl">
-              Khóa học miễn phí 3 buổi online, giúp bạn đọc vị dòng tiền cá mập
-              và giao dịch Vàng XAUUSD an toàn – lợi nhuận ổn định.Chỉ cần 1
-              công cụ & 1 tư duy đúng – không còn sợ cháy tài khoản.
+              Tham gia cùng đội ngũ trader dày dạn kinh nghiệm,
+              được hướng dẫn trực tiếp cách phân tích – vào lệnh – quản lý vốn theo quy trình thực chiến.
+              <br />
+              Cùng nhau học, thực hành và phát triển qua từng cú lệnh – không một mình giữa thị trường.
             </p>
 
             {/* FORM REGISTER */}
@@ -266,7 +270,9 @@ export default function Home() {
           <div className="relative flex justify-center items-center">
             {/* Instructor Image */}
             <div className="relative w-[600px] h-[600px] rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_40px_rgba(255,0,0,0.6)]">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/mter.jpg"
                 alt="Giảng viên Master Phúc"
                 className="object-cover w-full h-full"
@@ -293,11 +299,13 @@ export default function Home() {
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#180000] bg-cover bg-center"
         style={{ backgroundImage: "url('/background-chart-red.png')" }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* LEFT: Image */}
           <div className="flex justify-center">
             <div className="rounded-xl overflow-hidden border-4 border-red-700 shadow-[0_0_30px_rgba(255,0,0,0.4)]">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/trader-chart.jpg"
                 alt="Trader nhìn biểu đồ"
                 className="w-full h-full object-cover"
@@ -329,7 +337,7 @@ export default function Home() {
               <li className="flex items-start">
                 <span className="text-red-600 mr-2">▶</span>
                 <span>
-                  Giao dịch theo <span className="italic">"cảm tính"</span> hoặc
+                  Giao dịch theo <span className="uppercase italic">cảm tính</span> hoặc
                   tín hiệu từ người khác{" "}
                   <span className="text-red-500 font-semibold">
                     → Cháy tài khoản
@@ -364,10 +372,10 @@ export default function Home() {
         {/* FREE COURSE CTA */}
         <div className="max-w-5xl mx-auto mt-20 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white uppercase">
-            KHÓA HỌC MIỄN PHÍ <span className="text-red-500">3 BUỔI</span>
+            THỰC CHIẾN CÙNG CHUYÊN GIA
           </h3>
           <h4 className="text-2xl md:text-3xl font-bold text-red-500 uppercase mt-2">
-            “Bí Quyết Chinh Phục Thị Trường Forex”
+            “BÍ QUYẾT CHINH PHỤC THỊ TRƯỜNG CRYPTO”
           </h4>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -380,19 +388,6 @@ export default function Home() {
                 key={idx}
                 className="flex items-center justify-center bg-red-900/70 border border-red-700 text-white px-6 py-4 rounded-full font-medium shadow-md"
               >
-                <svg
-                  className="w-5 h-5 mr-2 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
                 {text}
               </div>
             ))}
@@ -408,7 +403,7 @@ export default function Home() {
         {/* Overlay tối nhẹ để nổi chữ */}
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT SIDE - Text */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 relative z-10">
             {[
@@ -462,7 +457,9 @@ export default function Home() {
 
           {/* RIGHT SIDE - Image */}
           <div className="flex justify-center relative z-10">
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/background.jpg"
               alt="Khóa học này sẽ giúp bạn"
               className="rounded-xl border-4 border-red-700 shadow-[0_0_40px_rgba(255,0,0,0.5)] w-full max-w-md object-cover"
@@ -476,18 +473,20 @@ export default function Home() {
         className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-red-600 bg-[#0f0000]"
         id="content"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="container mx-auto">
           <h2 className="text-center text-3xl md:text-4xl font-bold text-red-600 uppercase mb-2">
             NỘI DUNG KHÓA HỌC
           </h2>
           <h3 className="text-center text-2xl md:text-3xl font-bold text-white mb-10 uppercase">
-            “Bí Quyết Sống Sót Cùng Forex”
+            “Bí Quyết Sống Sót Cùng Crypto”
           </h3>
 
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* LEFT - Course Image */}
             <div className="flex justify-center">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/kh.jpeg"
                 alt="Khóa học Nến Thanh Khoản"
                 className="rounded-xl border-4 border-red-700 shadow-[0_0_25px_rgba(255,0,0,0.4)] max-w-sm"
@@ -499,7 +498,7 @@ export default function Home() {
               {[
                 {
                   title: "BUỔI 1",
-                  desc: "Thức tỉnh – Sự thật về Forex & nỗi đau của trader",
+                  desc: "Thức tỉnh – Sự thật về Crypto & nỗi đau của trader",
                 },
                 {
                   title: "BUỔI 2",
@@ -538,15 +537,15 @@ export default function Home() {
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#190000] bg-cover bg-center"
         style={{ backgroundImage: "url('/background2.jpg')" }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT - Checklist */}
           <div className="space-y-5">
             {[
-              "Hiểu luật chơi của thị trường FOREX và Market Maker điều khiển giá",
-              "Nhận diện Nến Thanh Khoản và vùng thanh khoản quan trọng nơi có dòng tiền cá mập",
-              "Sở hữu công thức setup lệnh chuẩn xác theo phương pháp",
-              "Quản trị vốn và tâm lý giao dịch tốt hơn",
-              "Tự tin tự chủ động giao dịch mà không cần phụ thuộc vào ai",
+              "Hiểu được thị trường và thành thạo các phương pháp scalping",
+              "Nhận diện được các mô hình nến và hiểu biết về các công cụ hỗ trợ",
+              "Biết quản lí rủi ro và tối ưu lợi nhuận ở thị trường",
+              "Nhận diện được các mô hình nến và hiểu biết về các công cụ hỗ trợ",
+              "Tự tin chủ động giao dịch mà không phụ thuộc vào ai",
             ].map((text, i) => (
               <div
                 key={i}
@@ -580,10 +579,12 @@ export default function Home() {
               BẠN SẼ NHẬN ĐƯỢC GÌ
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6">
-              SAU KHI THAM GIA KHÓA HỌC ?
+              SAU KHI THAM GIA ALPHA NET ?
             </h3>
             <div className="inline-block border-4 border-red-700 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(255,0,0,0.4)]">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/lic.jpg"
                 alt="Trước Sau Học"
                 className="w-full max-w-md object-cover"
@@ -598,14 +599,16 @@ export default function Home() {
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#100000] border-t border-red-700"
         id="instructor"
       >
-        <div className="max-w-6xl mx-auto bg-gradient-to-br from-black to-[#1a0000] rounded-xl overflow-hidden border border-red-800 shadow-[0_0_30px_rgba(255,0,0,0.3)]">
+        <div className="container mx-auto bg-gradient-to-br from-black to-[#1a0000] rounded-xl overflow-hidden border border-red-800 shadow-[0_0_30px_rgba(255,0,0,0.3)]">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* LEFT - Giảng viên */}
             <div className="relative bg-[#1a0000] h-full">
               <div className="bg-red-700 text-white text-sm font-bold px-4 py-2 absolute top-0 left-0 rounded-br-lg">
                 Master Phúc
               </div>
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/mter.jpg"
                 alt="Master Phúc"
                 className="w-full h-full object-cover rounded-tl-xl md:rounded-tl-xl md:rounded-bl-xl"
@@ -680,73 +683,87 @@ export default function Home() {
       </section>
 
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#160000] border-t border-red-700">
-        <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto">
           <h3 className="text-center text-2xl md:text-3xl font-semibold text-white mb-10">
-            NHỮNG KẾT QUẢ MÀ MÌNH ĐÃ LÀM ĐƯỢC
+            NHỮNG THÀNH TỰU CỦA CỘNG ĐỒNG ALPHA NET
           </h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 text-white text-sm md:text-base">
             <div className="flex text-red-600 items-start space-x-3 mt-8 ">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
               <p>
-                Phát triển phương pháp Nến Thanh Khoản dựa trên Wyckoff, VSA kết
-                hợp Price Action
+                Xây dựng cộng đồng hơn 500 trader thực chiến mỗi ngày
+                Nơi chia sẻ góc nhìn, tín hiệu và kinh nghiệm thực tế từ thị trường Crypto.
               </p>
             </div>
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
-              <p>Xây dựng chỉ báo Nến Thanh Khoản độc quyền</p>
+              <p>Phát triển phương pháp giao dịch và nhiều công cụ hỗ trợ & Đọc dòng tiền thông minh
+                Ứng dụng cấu trúc giá, vùng thanh khoản và hành vi dòng tiền lớn vào thực chiến.</p>
             </div>
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
               <p>
-                Nhiều học viên đạt lợi nhuận 15–40%/tháng ổn định và bền vững
+                Tạo hệ thống đào tạo & mentoring bài bản
+                Từ nền tảng cơ bản đến nâng cao – hướng dẫn cầm tay chỉ việc cho trader mới.
               </p>
             </div>
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
               <p>
-                Hệ thống đào tạo từ cơ bản đến nâng cao – thực chiến trực tiếp
+                Cung cấp tín hiệu & phân tích thực tế mỗi ngày
+                Giúp hội viên hiểu rõ “vì sao vào lệnh” thay vì chỉ “khi nào vào lệnh”.
               </p>
             </div>
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
-              <p>Nhóm cộng đồng hơn 2000 thành viên giao dịch mỗi ngày</p>
+              <p>Gắn kết & phát triển bền vững
+                Môi trường học hỏi, chia sẻ và hỗ trợ lẫn nhau – cùng tiến, cùng hiểu thị trường.</p>
             </div>
           </div>
         </div>
 
         {/* FEEDBACK HỌC VIÊN */}
-        <div className="max-w-6xl mx-auto mt-16 text-center">
+        <div className="container mx-auto mt-16 text-center">
           <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
-            FEEDBACK CỦA HỌC VIÊN
+            FEEDBACK CỦA CÁC THÀNH VIÊN
           </h3>
           <p className="text-red-500 mb-8 uppercase tracking-wide text-3xl">
-            Sau khi tham gia khóa học
+            SAU KHI THAM GIA CỘNG ĐỒNG
           </p>
 
           <div className="grid md:grid-cols-5 gap-6">
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback 1"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback 2"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
@@ -754,17 +771,23 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-6">
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback học viên offline"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback học viên offline"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/fb.jpg"
               alt="Feedback học viên offline"
               className="rounded-2xl shadow-lg w-full object-cover"
@@ -779,10 +802,12 @@ export default function Home() {
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#190000] bg-cover bg-center"
         style={{ backgroundImage: "url('/background3.jpg')" }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT - Image */}
           <div className="flex justify-center">
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/kh.jpeg"
               alt="Trader Image"
               className="rounded-lg border-4 border-red-700 shadow-[0_0_30px_rgba(255,0,0,0.4)] max-w-md"
@@ -792,7 +817,7 @@ export default function Home() {
           {/* RIGHT - Content */}
           <div className="text-white">
             <h3 className="text-red-600 font-bold uppercase text-lg mb-2">
-              Khóa học này
+              Cộng Đồng Này
             </h3>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase">
               Dành cho những ai?
@@ -826,22 +851,24 @@ export default function Home() {
 
       {/* SECTION: Quyền lợi bạn sẽ nhận được */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0f0000] border-t border-red-700">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT - Text Content */}
           <div>
             <h3 className="text-red-600 font-bold uppercase text-lg">
               Quyền lợi bạn sẽ nhận được
             </h3>
             <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6">
-              Khi tham gia khóa học
+              KHI THAM GIA CỘNG ĐỒNG ALPHANET
             </h2>
             <div className="h-[2px] w-20 bg-red-600 mb-6"></div>
 
             <div className="space-y-4">
               {[
-                "Thành thạo 1 phương pháp scalping Vàng với tỉ lệ thắng cao và lợi nhuận ổn định",
-                "Hỗ trợ cấp miễn phí Chỉ báo Nến Thanh Khoản độc quyền",
-                "Hỗ trợ 3–5 tín hiệu XAUUSD chuẩn phương pháp hàng ngày",
+                "Được hỗ trợ kèm 1-1 từ chuyên gia",
+                "Nhận các chỉ miễn phí độc quyền của cộng đồng",
+                "Nhận từ 3 - 5 tín hiệu chuẩn phương pháp",
+                "Hỗ trợ hoàn Vol giao dịch mỗi tuần",
+                "Hỗ thua lỗ nếu vào lệnh rủi ro",
               ].map((text, i) => (
                 <div
                   key={i}
@@ -870,7 +897,9 @@ export default function Home() {
 
           {/* RIGHT - Image */}
           <div className="flex justify-center">
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/lic.jpg"
               alt="Time is Money"
               className="rounded-lg border-4 border-red-700 shadow-[0_0_25px_rgba(255,0,0,0.4)] max-w-md"
@@ -881,20 +910,22 @@ export default function Home() {
 
       {/* 3 cột nội dung */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#160000] border-t border-red-700">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="container mx-auto text-center">
           {/* Tiêu đề */}
           <p className="text-red-500 text-sm md:text-base tracking-wide mb-2 uppercase">
             TẠI SAO BẠN PHẢI
           </p>
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-12 uppercase">
-            THAM GIA CHƯƠNG TRÌNH NÀY
+            THAM GIA alpha net
           </h3>
 
           {/* Grid 3 Box */}
           <div className="grid md:grid-cols-3 gap-8">
             {/* Box 1 */}
             <div className="rounded-2xl overflow-hidden shadow-lg bg-[#1a0000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.3)] transition-all duration-300">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/kh.jpeg"
                 alt="Phương pháp thực chiến"
                 className="w-full aspect-[16/9] object-cover"
@@ -909,7 +940,9 @@ export default function Home() {
 
             {/* Box 2 */}
             <div className="rounded-2xl overflow-hidden shadow-lg bg-[#1a0000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.3)] transition-all duration-300">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/trader-chart.jpg"
                 alt="Chỉ báo độc quyền"
                 className="w-full aspect-[16/9] object-cover"
@@ -924,7 +957,9 @@ export default function Home() {
 
             {/* Box 3 */}
             <div className="rounded-2xl overflow-hidden shadow-lg bg-[#1a0000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.3)] transition-all duration-300">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/trader-chart.jpg"
                 alt="Miễn phí khóa học"
                 className="w-full aspect-[16/9] object-cover"
@@ -947,7 +982,7 @@ export default function Home() {
         style={{ backgroundImage: "url('/background-final.jpg')" }}
         id="contact"
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-start">
           {/* LEFT SIDE - Offers */}
           <div>
             <h3 className="text-red-500 uppercase tracking-wide font-semibold mb-2">
@@ -959,7 +994,7 @@ export default function Home() {
 
             <div className="space-y-4">
               {[
-                "Khóa học 2 buổi “Bí Quyết Sống Sót Cùng Forex – Nến Thanh Khoản” trị giá 5.000.000 VNĐ → Nay chỉ 0đ",
+                "Khóa học 2 buổi “Bí Quyết Sống Sót Cùng Crypto – Nến Thanh Khoản” trị giá 5.000.000 VNĐ → Nay chỉ 0đ",
                 "Chỉ báo Nến Thanh Khoản độc quyền – Chỉ cấp cho các học viên",
                 "3–5 tín hiệu XAUUSD chuẩn phương pháp mỗi ngày, trực tiếp từ Master Phúc và team phân tích",
                 "Bộ tài liệu Wyckoff / VSA / Price Action (10.000.000 VNĐ) – để bạn hiểu sâu cấu trúc thị trường.",
