@@ -372,17 +372,17 @@ export default function Home() {
         {/* FREE COURSE CTA */}
         <div className="max-w-5xl mx-auto mt-20 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white uppercase">
-            THỰC CHIẾN CÙNG CHUYÊN GIA
+            THỰC CHIẾN CÙNG CỘNG ĐỒNG CRYPTO ALPHA NET
           </h3>
           <h4 className="text-2xl md:text-3xl font-bold text-red-500 uppercase mt-2">
-            “BÍ QUYẾT CHINH PHỤC THỊ TRƯỜNG CRYPTO”
+            “Hiểu thị trường – Giao dịch có kế hoạch – Phát triển bền vững”
           </h4>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "Phương pháp Scalping với Nến Thanh Khoản",
-              "Tư duy đọc thị trường theo dòng tiền lớn",
-              "Ứng dụng công cụ độc quyền để tăng xác suất thắng",
+              "Phương pháp Nến Thanh Khoản & Cấu Trúc Dòng Tiền",
+              "Tư duy đọc thị trường theo dấu vết cá mập",
+              "Ứng dụng công cụ hỗ trợ độc quyền để xác định vùng thanh khoản & điểm vào hiệu quả",
             ].map((text, idx) => (
               <div
                 key={idx}
@@ -412,16 +412,16 @@ export default function Home() {
                 desc: "Dựa vào hành vi giá thật, đọc cấu trúc thị trường để quyết định.",
               },
               {
-                title: "Giảm rủi ro bị quét SL",
-                desc: "Đặt SL ngoài swing kèm buffer, ưu tiên vào sau khi quét đỉnh/đáy và giá quay lại vùng.",
+                title: "Giảm rủi ro – tối ưu lợi nhuận",
+                desc: "Tư duy quản lý vốn và điểm vào/thoát rõ ràng, hạn chế bị “quét SL”.",
               },
               {
-                title: "Tối ưu điểm vào/ra lệnh",
-                desc: "Chờ pullback về vùng hợp lưu, TP ở đỉnh–đáy hoặc trailing SL để tối đa lợi nhuận.",
+                title: "Cầm tay chỉ việc – dễ áp dụng",
+                desc: "Quy trình hướng dẫn chi tiết, phù hợp cả cho người mới lẫn trader trung cấp.",
               },
               {
-                title: "Dễ dàng áp dụng",
-                desc: "Quy trình các bước dễ dàng dành cho trader mới và trung cấp.",
+                title: "Học từ cộng đồng thực chiến",
+                desc: "Nơi hàng nghìn trader chia sẻ, thảo luận và cùng phát triển mỗi ngày – hoàn toàn miễn phí.",
               },
             ].map((item, idx) => (
               <div
@@ -698,8 +698,10 @@ export default function Home() {
             </div>
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
-              <p>Phát triển phương pháp giao dịch và nhiều công cụ hỗ trợ & Đọc dòng tiền thông minh
-                Ứng dụng cấu trúc giá, vùng thanh khoản và hành vi dòng tiền lớn vào thực chiến.</p>
+              <p>
+                Phát triển phương pháp giao dịch và nhiều công cụ hỗ trợ & Đọc dòng tiền thông minh
+                Ứng dụng cấu trúc giá, vùng thanh khoản và hành vi dòng tiền lớn vào thực chiến.
+              </p>
             </div>
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
@@ -718,7 +720,8 @@ export default function Home() {
             <div className="flex text-red-600 items-start space-x-3 mt-8">
               <span className="text-red-600 text-5xl mt-0.5">⚙️</span>
               <p>Gắn kết & phát triển bền vững
-                Môi trường học hỏi, chia sẻ và hỗ trợ lẫn nhau – cùng tiến, cùng hiểu thị trường.</p>
+                Môi trường học hỏi, chia sẻ và hỗ trợ lẫn nhau – cùng tiến, cùng hiểu thị trường.
+              </p>
             </div>
           </div>
         </div>
