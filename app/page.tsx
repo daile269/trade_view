@@ -3,6 +3,15 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import { FaUser } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { IoIosSend } from "react-icons/io";
+import { IoIosWarning } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { SiZalo } from "react-icons/si";
+import { FaTiktok } from "react-icons/fa";
 
 const menu = [
   {
@@ -599,35 +608,29 @@ export default function Home() {
         <div className="container mx-auto bg-gradient-to-br from-black to-[#1a0000] rounded-xl overflow-hidden border border-red-800 shadow-[0_0_30px_rgba(255,0,0,0.3)]">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* LEFT - Giảng viên */}
-            <div className="relative bg-[#1a0000] h-full">
-              <div className="bg-red-700 text-white text-sm font-bold px-4 py-2 absolute top-0 left-0 rounded-br-lg">
-                Master Phúc
-              </div>
-              <Image
-                width={500}
-                height={500}
-                src="/mter.jpg"
-                alt="Master Phúc"
-                className="w-full h-full object-cover rounded-tl-xl md:rounded-tl-xl md:rounded-bl-xl"
-              />
+            <div className=" bg-[#1a0000] h-full flex justify-center">
+              <video className='' autoPlay={true} muted loop id="myVideo">
+                <source src="/assets/videos/alphanet.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
             </div>
 
             {/* RIGHT - Info */}
             <div className="p-8 space-y-5">
               <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-2">
-                GIỚI THIỆU GIẢNG VIÊN
+                GIỚI THIỆU CỘNG ĐỒNG ALPHA NET
               </h2>
               <div className="h-1 w-20 bg-red-600 mb-4"></div>
               <p className="text-gray-300">
-                Nhà giao dịch chuyên nghiệp với hơn{" "}
-                <b>6 năm kinh nghiệm Forex & chuyên sâu XAUUSD</b>
+                Alpha Net là cộng đồng dành cho những người muốn hiểu rõ thị trường Crypto và giao dịch theo tư duy của dòng tiền lớn – không chạy theo tin đồn hay cảm xúc.
               </p>
 
               <ul className="space-y-3">
                 {[
-                  "Chuyên gia trong lĩnh vực Trade Forex với hơn 6 năm kinh nghiệm",
-                  "Người sáng tạo phương pháp Scalping Nến Thanh Khoản và chỉ báo độc quyền",
-                  "Đã huấn luyện hơn 500 trader, nhiều học viên đạt mức tăng trưởng ổn định hàng tháng 15-40% tài khoản",
+                  "Cộng đồng thực chiến với hàng nghìn trader tham gia mỗi ngày, nơi mọi kiến thức được chia sẻ minh bạch và miễn phí.",
+                  "Đội ngũ hướng dẫn có kinh nghiệm nhiều năm trong thị trường Futures, luôn đồng hành và hỗ trợ trực tiếp từng hội viên.",
+                  "Phương pháp trọng tâm: Đọc dòng tiền, nắm bắt vùng thanh khoản & hành vi giá – giúp trader hiểu “vì sao” thay vì chỉ “khi nào vào lệnh”.",
+                  "Đã hỗ trợ hơn 1.000 trader, nhiều người đạt được sự ổn định và tự tin trong giao dịch thực tế."
                 ].map((text, i) => (
                   <li key={i} className="flex items-start space-x-2">
                     <svg
@@ -647,31 +650,22 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-
-              <div className="bg-red-700/90 rounded-lg p-4 text-white text-sm mt-6">
-                Master Phúc sẽ hướng dẫn bạn từng bước để làm chủ phương pháp
-                Nến Thanh Khoản để giao dịch
-              </div>
-
               {/* Social icons */}
-              <div className="flex space-x-4 mt-4">
-                <a
-                  href="#"
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 transition"
-                >
-                  <i className="fab fa-whatsapp text-white"></i>
+              <div className="flex gap-5 text-xl text-white">
+                <a href='https://t.me/Crypt0vn' target='_blank' className='cursor-pointer border border-[var(--second)] rounded p-2 flex justify-center items-center'>
+                  <FaTelegramPlane />
                 </a>
-                <a
-                  href="#"
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 transition"
-                >
-                  <i className="fab fa-facebook-f text-white"></i>
+                <a href='https://www.facebook.com/profile.php?id=100079515246834' target='_blank' className='cursor-pointer border border-[var(--second)] rounded p-2 flex justify-center items-center'>
+                  <FaFacebookF />
                 </a>
-                <a
-                  href="#"
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-sky-500 hover:bg-sky-600 transition"
-                >
-                  <i className="fab fa-telegram-plane text-white"></i>
+                <a href='https://zalo.me/g/dxxkfh223' target='_blank' className='cursor-pointer border border-[var(--second)] rounded p-2 flex justify-center items-center'>
+                  <SiZalo />
+                </a>
+                <a href='https://www.tiktok.com/search?q=ALPHANET&t=1760590899718' target='_blank' className='cursor-pointer border border-[var(--second)] rounded p-2 flex justify-center items-center'>
+                  <FaTiktok />
+                </a>
+                <a href='tel:0586636343' target='_blank' className='cursor-pointer border border-[var(--second)] rounded p-2 flex justify-center items-center'>
+                  <FaPhoneAlt />
                 </a>
               </div>
             </div>
