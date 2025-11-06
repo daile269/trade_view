@@ -12,6 +12,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import { FaTiktok } from "react-icons/fa";
+import ContactForm from "./components/ContactForm";
 
 const menu = [
   {
@@ -19,7 +20,7 @@ const menu = [
     href: "#content"
   },
   {
-    title: "Giảng Viên",
+    title: "Cộng Đồng",
     href: "#instructor"
   },
   {
@@ -249,29 +250,7 @@ export default function Home() {
                 </span>{" "}
                 – đăng ký nhanh nhất!
               </p>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Họ và Tên"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black focus:ring-2 focus:ring-red-500 focus:outline-none"
-                />
-                <input
-                  type="tel"
-                  placeholder="Số điện thoại"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black focus:ring-2 focus:ring-red-500 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black focus:ring-2 focus:ring-red-500 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-red-600 text-white font-bold uppercase py-3 rounded-md hover:bg-red-700 transition-all duration-300 shadow-lg"
-                >
-                  Đăng ký tham gia ngay!
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
 
@@ -718,7 +697,7 @@ export default function Home() {
         </div>
 
         {/* FEEDBACK HỌC VIÊN */}
-        <div className="container mx-auto mt-16 text-center">
+        <div className="container mx-auto mt-16 text-center" id="feedback">
           <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
             FEEDBACK CỦA CÁC THÀNH VIÊN
           </h3>
@@ -1010,32 +989,7 @@ export default function Home() {
                 <span className="text-white">100 slot</span> đăng ký nhanh nhất
               </p>
 
-              <form className="space-y-3">
-                <input
-                  type="text"
-                  placeholder="Họ và Tên"
-                  required
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-600 focus:outline-none"
-                />
-                <input
-                  type="tel"
-                  placeholder="Số điện thoại"
-                  required
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-600 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  required
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-600 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-black text-white font-bold py-3 rounded-md text-lg uppercase hover:bg-gray-900 transition border border-white"
-                >
-                  Đăng ký tham gia ngay!
-                </button>
-              </form>
+              <ContactForm />
 
               <p className="text-center text-xs text-gray-100 mt-3">
                 Sau khi đủ chỗ, form đăng ký sẽ tự động đóng lại và ưu đãi sẽ bị

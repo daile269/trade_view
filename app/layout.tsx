@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["vietnamese", "latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Bí Quyết Sống Sót Cùng Crypto - Khóa Học Trading Miễn Phí",
-  description: "Khóa học miễn phí 3 buổi online, giúp bạn đọc vị dòng tiền cá mập và giao dịch Vàng XAUUSD an toàn – lợi nhuận ổn định. Phương pháp Scalping với Nến Thanh Khoản.",
+  title: "Alpha Net",
+  description: "KẾT NỐI KHÔNG GIỚI HẠN - CHIA SẺ KHÔNG RANH GIỚI",
   keywords: "forex trading, khóa học forex, trading miễn phí, scalping, nến thanh khoản, XAUUSD, Master Phúc, HP Trading",
   authors: [{ name: "Master Phúc - HP Trading" }],
   openGraph: {
@@ -28,7 +22,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://www.tradedudicho.com/",
+    canonical: "https://www.alphanet.vn/",
   },
 };
 
@@ -39,9 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={`${inter.className} antialiased`}>
-        {children}
-      </body>
+        <body className="antialiased">
+            {children}
+        </body>
     </html>
   );
 }
