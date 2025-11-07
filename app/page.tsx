@@ -861,7 +861,7 @@ export default function Home() {
               ].map((text, i) => (
                 <div
                   key={i}
-                  className="flex items-center space-x-3 bg-red-900/70 border border-red-700 px-5 py-3 rounded-md"
+                  className="flex items-center space-x-3 bg-red-900/70 border border-red-700 px-5 py-3 rounded-md w-full"
                 >
                   <div className="w-4 h-4 bg-red-600 rounded-full flex items-center justify-center">
                     <svg

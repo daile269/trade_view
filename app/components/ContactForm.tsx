@@ -52,9 +52,9 @@ const ContactForm = () => {
                 createdDate: serverTimestamp(),
                 message: "user data"
             })
-            reset()
             toast.success("Thành Công, Chúng Tôi Sẽ Sớm Liên Hệ Với Bạn!!")
             setIsLoading(false)
+            reset()
         } catch (error) {
             setIsLoading(false)
             toast.info("Hãy Thử Liên Hệ Với Chúng Tôi Bằng Phương Thức Khác!!")

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Alpha Net",
@@ -34,6 +35,10 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="antialiased">
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+        />
         {children}
       </body>
     </html>
