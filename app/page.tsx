@@ -992,10 +992,10 @@ export default function Home() {
 
             <div className="space-y-4">
               {[
-                "Khóa học 2 buổi “Bí Quyết Sống Sót Cùng Crypto – Nến Thanh Khoản” trị giá 5.000.000 VNĐ → Nay chỉ 0đ",
-                "cộng cụ chỉ báo độc quyền của alpha net , chỉ cung cấp cho hội viên",
-                "3–5 tín hiệu chuẩn phương pháp mỗi ngày, trực tiếp từ team phân tích",
                 "Được hỗ trợ kèm 1-1 trực tiếp từ các chuyên gia lâu năm trong thị trường, bạn sẽ không còn phải tự mò mẫm một mình nữa.",
+                "Công cụ chỉ báo độc quyền của alpha net , chỉ cung cấp cho hội viên",
+                "3–5 tín hiệu chuẩn phương pháp mỗi ngày, trực tiếp từ team phân tích",
+                "Bộ tài liệu Wyckoff / VSA / Price Action (10.000.000 VNĐ) – để bạn hiểu sâu cấu trúc thị trường."
               ].map((text, i) => (
                 <div
                   key={i}
