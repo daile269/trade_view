@@ -300,7 +300,7 @@ export default function Home() {
             </div>
 
             {/* Label */}
-            <div className="absolute -bottom-8 px-6 py-3 rounded-md flex justify-center shadow-lg w-[90%] max-w-sm">
+            {/* <div className="absolute -bottom-8 px-6 py-3 rounded-md flex justify-center shadow-lg w-[90%] max-w-sm">
               <Image
                 width={500}
                 height={500}
@@ -308,7 +308,7 @@ export default function Home() {
                 alt="img"
                 className="object-cover w-full h-full"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
