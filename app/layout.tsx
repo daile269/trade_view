@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className="antialiased">
+      <body className="antialiased" cz-shortcut-listen="true">
         <ToastContainer
           position="top-right"
           autoClose={2000}
