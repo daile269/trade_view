@@ -34,28 +34,28 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  React.useEffect(() => {
-    (async () => {
-      new Promise(async (rs) => {
-        await setTimeout(() => {
-          rs(setIsLoading(false))
-        }, 4000)
-      })
-    })()
-  }, [])
+  // React.useEffect(() => {
+  //   (async () => {
+  //     new Promise(async (rs) => {
+  //       await setTimeout(() => {
+  //         rs(setIsLoading(false))
+  //       }, 4000)
+  //     })
+  //   })()
+  // }, [])
 
-  if (isLoading) {
-    return (
-      <div className="w-screen h-screen bg-black">
-        <div className="fixed ml-[50vw] translate-x-[-50%]">
-          <video autoPlay={true} muted loop id="myVideo" className="max-h-screen min-w-screen max-w-none " >
-            <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
-            Your browser does not support HTML5 video.
-          </video>
-        </div>
-      </div>
-    )
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="w-screen h-screen bg-black">
+  //       <div className="fixed ml-[50vw] translate-x-[-50%]">
+  //         <video autoPlay={true} muted loop id="myVideo" className="max-h-screen min-w-screen max-w-none " >
+  //           <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
+  //           Your browser does not support HTML5 video.
+  //         </video>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   return (
     <div
@@ -644,7 +644,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* LEFT - Giảng viên */}
             <div className=" bg-[#1a0000] h-full flex justify-center">
-              <video className='' autoPlay={true} muted loop id="myVideo">
+              <video autoPlay={true} muted loop id="myVideo">
                 <source src="/assets/videos/alphanet.mp4" type="video/mp4" />
                 Your browser does not support HTML5 video.
               </video>
