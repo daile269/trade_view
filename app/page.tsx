@@ -9,7 +9,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import { FaTiktok } from "react-icons/fa";
 import ContactForm from "./components/ContactForm";
-import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const menu = [
   {
