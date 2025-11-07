@@ -488,7 +488,7 @@ export default function Home() {
               width={500}
               height={500}
               src="/background.jpg"
-              alt="Khóa học này sẽ giúp bạn"
+              alt="img"
               className="rounded-xl border-4 border-red-700 shadow-[0_0_40px_rgba(255,0,0,0.5)] w-full max-w-md object-cover"
             />
           </div>
@@ -515,7 +515,7 @@ export default function Home() {
                 width={500}
                 height={500}
                 src="/kh.jpeg"
-                alt="Khóa học Nến Thanh Khoản"
+                alt="img"
                 className="rounded-xl border-4 border-red-700 shadow-[0_0_25px_rgba(255,0,0,0.4)] max-w-sm"
               />
             </div>
@@ -950,7 +950,7 @@ export default function Home() {
                 width={500}
                 height={500}
                 src="/trader-chart.jpg"
-                alt="Miễn phí khóa học"
+                alt="img"
                 className="w-full aspect-[16/9] object-cover"
               />
               <div className="bg-gradient-to-b from-[#1a0000] to-[#2a0000] py-4 px-4">
@@ -1024,7 +1024,7 @@ export default function Home() {
                 Điền thông tin bên dưới
               </h3>
               <p className="text-yellow-300 text-center font-semibold mb-4 text-sm md:text-base">
-                Tham gia khóa học miễn phí ngay! <br /> Chỉ dành cho{" "}
+                Tham gia miễn phí ngay! <br /> Chỉ dành cho{" "}
                 <span className="text-white">100 slot</span> đăng ký nhanh nhất
               </p>
 
