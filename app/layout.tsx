@@ -4,8 +4,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Alpha Net",
   description: "KẾT NỐI KHÔNG GIỚI HẠN - CHIA SẺ KHÔNG RANH GIỚI",
-  keywords: "forex trading, khóa học forex, trading miễn phí, scalping, nến thanh khoản, XAUUSD, Master Phúc, HP Trading",
-  authors: [{ name: "Master Phúc - HP Trading" }],
+  keywords: "forex trading, khóa học forex, trading miễn phí, scalping, nến thanh khoản, XAUUSD, Thế Bảo, Crypto, Alphanet",
+  authors: [{ name: "Thế Bảo" }],
   openGraph: {
     title: "Bí Quyết Sống Sót Cùng Crypto - Khóa Học Trading Miễn Phí",
     description: "Phương pháp Scalping với Nến Thanh Khoản - Dành cho 10% Trader Thắng Cuộc",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bí Quyết Sống Sót Cùng Crypto",
-    description: "Khóa học trading miễn phí với Master Phúc",
+    description: "Cộng đồng Alpha Net, cộng đồng crypto số một việt nam",
   },
   robots: {
     index: true,
@@ -33,9 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-        <body className="antialiased">
-            {children}
-        </body>
+      <body className="antialiased">
+        {children}
+      </body>
     </html>
   );
 }

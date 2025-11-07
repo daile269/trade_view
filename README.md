@@ -49,7 +49,7 @@ forex-landing/
 4. **Course Benefits** - Lợi ích của khóa học
 5. **Course Content** - Nội dung 3 buổi học
 6. **What You'll Get** - Kiến thức sẽ nhận được
-7. **Instructor** - Giới thiệu Master Phúc
+7. **Instructor** - Giới thiệu Cộng Đồng Alpha net
 8. **Target Audience** - Đối tượng phù hợp
 9. **Value Proposition** - Tổng trị giá miễn phí
 10. **Registration Form** - Form đăng ký

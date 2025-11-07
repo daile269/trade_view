@@ -95,6 +95,7 @@ export default function Home() {
             {/* Button Desktop */}
             <div className="hidden md:block p-3">
               <a
+                onClick={toggleMenu}
                 href="#register"
                 className="bg-red-900/70 backdrop-blur-sm text-white px-7 py-3 rounded-md font-bold shadow-md hover:bg-red-700 transition"
               >
@@ -145,36 +146,42 @@ export default function Home() {
           <div className="md:hidden bg-black border-t border-red-600 animate-slide-down">
             <div className="px-4 pt-3 pb-4 space-y-2">
               <a
+                onClick={toggleMenu}
                 href="#solution"
                 className="block px-3 py-2 text-white rounded hover:bg-red-900 transition"
               >
                 Giải Pháp
               </a>
               <a
+                onClick={toggleMenu}
                 href="#content"
                 className="block px-3 py-2 text-white rounded hover:bg-red-900 transition"
               >
                 Nội Dung
               </a>
               <a
+                onClick={toggleMenu}
                 href="#instructor"
                 className="block px-3 py-2 text-white rounded hover:bg-red-900 transition"
               >
-                Giảng Viên
+                Cộng đồng
               </a>
               <a
+                onClick={toggleMenu}
                 href="#feedback"
                 className="block px-3 py-2 text-white rounded hover:bg-red-900 transition"
               >
                 Đánh Giá
               </a>
               <a
+                onClick={toggleMenu}
                 href="#contact"
                 className="block px-3 py-2 text-white rounded hover:bg-red-900 transition"
               >
                 Liên Hệ
               </a>
               <a
+                onClick={toggleMenu}
                 href="#register"
                 className="block px-3 py-2 bg-red-900/70 backdrop-blur-sm text-center text-white font-bold rounded-md hover:bg-red-700 transition"
               >
@@ -258,7 +265,7 @@ export default function Home() {
                 width={500}
                 height={500}
                 src="/assets/banner/btc3.png"
-                alt="Giảng viên Master Phúc"
+                alt="img"
                 className="object-cover w-full h-full"
               />
               <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center">
@@ -268,14 +275,14 @@ export default function Home() {
                       width={500}
                       height={500}
                       src="/assets/banner/4.png"
-                      alt="Giảng viên Master Phúc"
+                      alt="img"
                       className="object-cover w-1/2 h-1/2"
                     />
                     <Image
                       width={500}
                       height={500}
                       src="/assets/banner/5.png"
-                      alt="Giảng viên Master Phúc"
+                      alt="img"
                       className="object-cover w-1/2 h-1/2"
                     />
                   </div>
@@ -284,14 +291,14 @@ export default function Home() {
                       width={500}
                       height={500}
                       src="/assets/banner/6.png"
-                      alt="Giảng viên Master Phúc"
+                      alt="img"
                       className="object-cover w-1/2 h-1/2"
                     />
                     <Image
                       width={500}
                       height={500}
                       src="/assets/banner/3.png"
-                      alt="Giảng viên Master Phúc"
+                      alt="img"
                       className="object-cover w-1/2 h-1/2"
                     />
                   </div>
@@ -978,7 +985,7 @@ export default function Home() {
               {[
                 "Khóa học 2 buổi “Bí Quyết Sống Sót Cùng Crypto – Nến Thanh Khoản” trị giá 5.000.000 VNĐ → Nay chỉ 0đ",
                 "Chỉ báo Nến Thanh Khoản độc quyền – Chỉ cấp cho các học viên",
-                "3–5 tín hiệu XAUUSD chuẩn phương pháp mỗi ngày, trực tiếp từ Master Phúc và team phân tích",
+                "3–5 tín hiệu chuẩn phương pháp mỗi ngày, trực tiếp từ team phân tích",
                 "Bộ tài liệu Wyckoff / VSA / Price Action (10.000.000 VNĐ) – để bạn hiểu sâu cấu trúc thị trường.",
               ].map((text, i) => (
                 <div
@@ -1078,8 +1085,7 @@ export default function Home() {
               <div className="flex items-start space-x-2">
                 <span className="text-red-600 text-lg mt-0.5">▶</span>
                 <p className="text-white">
-                  <span className="font-semibold">Giảng viên:</span> Master Phúc
-                  – HP Trading
+                  <span className="font-semibold">Giảng viên:</span> Thế Bảo
                 </p>
               </div>
               <div className="flex items-start space-x-2">
