@@ -889,9 +889,9 @@ export default function Home() {
             <Image
               width={500}
               height={500}
-              src="/lic.jpg"
+              src="/assets/alpha.png"
               alt="Time is Money"
-              className="rounded-lg border-4 border-red-700 shadow-[0_0_25px_rgba(255,0,0,0.4)] max-w-md"
+              className="rounded-lg max-w-md"
             />
           </div>
         </div>
