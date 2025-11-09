@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Alpha Net",
@@ -40,6 +41,7 @@ export default function RootLayout({
           autoClose={2000}
         />
         {children}
+        <GoogleAnalytics gaId="G-TDYXQEWDT9" />
       </body>
     </html>
   );
