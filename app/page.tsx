@@ -343,8 +343,8 @@ export default function Home() {
             Đừng để bạn tiếp tục thua lỗ thêm một ngày nào nữa.
           </p>
         </div>
-        <div className="container mx-auto flex flex-col xl:flex-row gap-10 items-center">
-          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
+        <div className="container mx-auto flex flex-col xl:flex-row gap-10 ">
+          <div className=" flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
             <div>
               <Image
                 src="/assets/svg/money.svg"
@@ -362,7 +362,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-orange-950/30 border-orange-800 ">
+          <div className=" flex gap-5 items-center rounded-xl p-2 border-2 bg-orange-950/30 border-orange-800 ">
             <div>
               <Image
                 src="/assets/svg/candlestick.svg"
@@ -380,7 +380,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-yellow-950/30 border-yellow-800 ">
+          <div className=" flex gap-5 items-center rounded-xl p-2 border-2 bg-yellow-950/30 border-yellow-800 ">
             <div>
               <Image
                 src="/assets/svg/emotion.svg"
@@ -398,7 +398,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-blue-950/30 border-blue-800 ">
+          <div className=" flex gap-5 items-center rounded-xl p-2 border-2 bg-blue-950/30 border-blue-800 ">
             <div>
               <Image
                 src="/assets/svg/list.svg"
@@ -824,27 +824,19 @@ export default function Home() {
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#190000] bg-cover bg-center"
         style={{ backgroundImage: "url('/background2.jpg')" }}
       >
-        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto items-center">
           {/* RIGHT - Image */}
           <div className="text-center">
+
             <h2 className="text-xl md:text-2xl font-bold text-red-500 uppercase mb-2">
               BẠN SẼ NHẬN ĐƯỢC GÌ
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6">
               SAU KHI THAM GIA ALPHA NET ?
             </h3>
-            <div className="inline-block ">
-              <Image
-                width={500}
-                height={500}
-                src="/assets/alpha.png"
-                alt="Trước Sau Học"
-                className="w-full max-w-md object-cover"
-              />
-            </div>
           </div>
           {/* LEFT - Checklist */}
-          <div className="space-y-5">
+          {/* <div className="space-y-5">
             {[
               "Hiểu được thị trường và thành thạo các phương pháp scalping",
               "Nhận diện được các mô hình nến và hiểu biết về các công cụ hỗ trợ",
@@ -876,6 +868,63 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div> */}
+          <div className="container mx-auto flex flex-col xl:flex-row gap-10">
+            <div className="gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
+                Hiểu thị trường – Làm chủ phương pháp giao dịch
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Nắm vững cấu trúc thị trường, dòng tiền và hành vi giá.
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Thành thạo các phương pháp Scalping, Day Trading hiệu quả.
+              </p>
+            </div>
+            <div className="gap-5 items-center rounded-xl p-2 border-2 bg-orange-950/30 border-orange-800 ">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+                Phân Tích Xu Hướng & Mô Hình Nến
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Đọc nến – hiểu dòng tiền – nhận biết vùng thanh khoản.
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Cập nhật xu hướng & mức hỗ trợ/kháng cự hằng ngày.
+              </p>
+            </div>
+            <div className="gap-5 items-center rounded-xl p-2 border-2 bg-yellow-950/30 border-yellow-800 ">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+                Quản Lý Rủi Ro & Tối Ưu Lợi Nhuận
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Biết cách đặt SL/TP hợp lý, tránh “cháy tài khoản”.
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Xây dựng chiến lược bảo toàn vốn & tăng trưởng ổn định.
+              </p>
+            </div>
+            <div className="gap-5 items-center rounded-xl p-2 border-2 bg-blue-950/30 border-blue-800 ">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+                Hỗ Trợ 1-1 & Cộng Đồng Thực Chiến
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Được đội ngũ chuyên gia trực tiếp hướng dẫn.
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Cập nhật tín hiệu, phân tích, tài liệu độc quyền mỗi ngày.
+              </p>
+            </div>
+            <div className="gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
+                Tự Tin Giao Dịch – Không Phụ Thuộc Vào Ai
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Tự đọc biểu đồ, tự xác định điểm vào/ra lệnh.
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Trở thành trader độc lập, hiểu và làm chủ thị trường thực sự.
+              </p>
+            </div>
           </div>
         </div>
       </section>
