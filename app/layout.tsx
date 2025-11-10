@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import { GoogleAnalytics } from '@next/third-parties/google'
+
+// Import Swiper styles
+import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export const metadata: Metadata = {
   title: "Alpha Net",

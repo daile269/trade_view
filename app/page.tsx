@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -9,7 +8,11 @@ import { FaFacebookF } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import { FaTiktok } from "react-icons/fa";
 import ContactForm from "./components/ContactForm";
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { Pagination } from 'swiper/modules';
 const menu = [
   {
     title: "Nội Dung",
@@ -753,37 +756,71 @@ export default function Home() {
           <p className="text-red-500 mb-8 uppercase tracking-wide text-3xl">
             SAU KHI THAM GIA CỘNG ĐỒNG
           </p>
-
-          <div className="grid md:grid-cols-5 gap-6">
-            <Image
-              width={500}
-              height={500}
-              src="/assets/1.jpg"
-              alt="Feedback 1"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-            <Image
-              width={500}
-              height={500}
-              src="/assets/2.jpg"
-              alt="Feedback 2"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-            <Image
-              width={500}
-              height={500}
-              src="/assets/3.jpg"
-              alt="Feedback 3"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-            <Image
-              width={500}
-              height={500}
-              src="/assets/4.jpg"
-              alt="Feedback 3"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-          </div>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            breakpoints={{
+              1: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            loop={true}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Image
+                width={500}
+                height={500}
+                src="/assets/1.jpg"
+                alt="Feedback 1"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                width={500}
+                height={500}
+                src="/assets/2.jpg"
+                alt="Feedback 2"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                width={500}
+                height={500}
+                src="/assets/1.jpg"
+                alt="Feedback 1"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                width={500}
+                height={500}
+                src="/assets/3.jpg"
+                alt="Feedback 3"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                width={500}
+                height={500}
+                src="/assets/4.jpg"
+                alt="Feedback 4"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
 
